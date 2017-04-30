@@ -1,3 +1,22 @@
-<header>
-Hello! this is the header!
+<header id = "navbar">
+	<nav class = "navbar navbar-default">
+		<div class = "container-fluid">
+			<div class="navbar-header">
+				<%= link_to "Members Only", root_path, class: "navbar-brand"%>
+	   		</div>
+
+	   		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+      	<!-- if not signed in -->
+        <li><%= link_to "Sign in", '#'%></li>
+        <!-- if signed in -->
+        <li><%= link_to "Posts", '#'%></li>
+        <li><%= link_to "Home", root_path%></li>
+        <li><%= link_to "Log out", '#'%></li>
+      </ul>
+    </div>
+	   	</div>
+     </nav>
 </header>
