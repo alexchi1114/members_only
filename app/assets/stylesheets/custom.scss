@@ -16,8 +16,6 @@ $gray-medium-light: #eaeaea;
 
 
 
-
-
 /* footer */
 
 footer {
@@ -51,10 +49,22 @@ h1 {
 }
 
 
+
 /* forms */
 
 .container {
-	width:450px;
+	width:550px;
+}
+
+/* Contact */
+
+.icon-container {
+	text-align:center;
+}
+
+.icon {
+	padding: 10px;
+	
 }
 
 
