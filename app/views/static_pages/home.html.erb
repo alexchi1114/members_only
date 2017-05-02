@@ -1,6 +1,13 @@
-<div class="jumbotron text-center">
-  <h1>Welcome to Members Only</h1>
-  <p>Sign in to see posts from members</p> 
-  <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
 
+
+<%if logged_in?%>
+	<div class="jumbotron text-center">
+ 		 <h1>Welcome to Members Only, <%=current_user.name%></h1>
+ 	</div>
+<%else %>
+	<div class="jumbotron text-center">
+	  <h1>Welcome to Members Only</h1>
+	  <p>Sign in to see posts from members</p> 
+	  <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
+	</div>
+<%end%>
