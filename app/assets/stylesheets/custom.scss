@@ -59,6 +59,20 @@ h1 {
 	width:550px;
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 /* Contact */
 
 .icon-container {
@@ -71,6 +85,38 @@ h1 {
 }
 
 
+/* Posts */
+
+.post-container{
+  border: 1px solid black;
+  width: 400px;
+  border-radius:4px;
+  overflow-wrap: break-word;
+}
+
+#author-post{
+  font-size:2em;
+  border-bottom:1px solid black;
+}
+
+#subject-post{
+  font-size:15px;
+}
+
+#time-stamp-post{
+  float:left;
+  display:inline-block;
+}
+
+#time-stamp-hour-post{
+  float:right;
+  display:inline-block;
+}
+
+#body-post{
+  margin:10px 10px;
+  text-align:justify;
+}
 
 
 

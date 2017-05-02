@@ -5,6 +5,27 @@
 
 
 <div>
-	You don't have any posts yet. Would you like to post something?
+	<% @posts.each do |post|%>
+		<div class = "post-container container">
+			<div>
+				<span id = "time-stamp-post"><%=post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m-%d-%Y")%></span>
+
+				<span id = "time-stamp-hour-post"><%=post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%I:%M%p")%>
+				</span>
+
+				
+			</div>
+			<span id = "author-post"><%=post.user.name %></span>
+
+
+			<div id = "subject-post">Subject: <%=post.subject%></div>
+			
+			<div id = "body-post">
+				<%=post.body%>
+			</div>
+		</div>
+		<br>
+	<%end%>
+
 </div>
 
