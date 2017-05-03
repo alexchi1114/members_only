@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		if @user.save
 			log_in @user
 			flash[:success] = "Welcome to Members Only"
-			redirect_to @user
+			redirect_to root_path
 		else
 			render 'new'
 		end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@posts = @user.posts
+		@posts = Post.where(:user_id => @user.id).paginate(page:params[:page],per_page: 5).order('created_at desc')
 	end
 
 	private 

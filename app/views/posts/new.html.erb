@@ -1,9 +1,9 @@
 <div class = "container">
 	<div class = 'form-group'>
 		<%= form_for(@post) do |f| %>
-
+    <%= render 'shared/post_error_messages' %>
 		<%= f.label :subject%>
-      	<%= f.text_field :subject, class: "form-control"%>
+      	<%= f.text_field :subject, class: "form-control", :maxlength => 40%>
         <br>
       	<%= f.label "Content (cannot exceed 140 characters)" %>
       	<%= f.text_area :body, class: "form-control", :maxlength => 140%>
