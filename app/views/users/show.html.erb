@@ -23,12 +23,13 @@
 			<div id = "body-post">
 				<%=post.body%>
 			</div>
-			
+			<% if post.user == current_user %>
 			<div>
 				<ul id = "post-footer">
 					<li><%= link_to 'Delete', post, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %> </li>
 				</ul>
 			</div>
+			<%end%>
 		</div>
 		<br>
 	<%end%>
