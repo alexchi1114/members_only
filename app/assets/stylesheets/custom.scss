@@ -17,6 +17,10 @@ $gray-medium-light: #eaeaea;
 	text-align:center;
 }
 
+textarea {
+  resize:none;
+}
+
 
 
 /* footer */
@@ -90,17 +94,23 @@ h1 {
 .post-container{
   border: 1px solid black;
   width: 400px;
+  height:170px;
   border-radius:4px;
   overflow-wrap: break-word;
+  overflow:hidden;
+  position:relative;
 }
 
 #author-post{
   font-size:2em;
   border-bottom:1px solid black;
+  text-align:center;
+  display:block;
 }
 
 #subject-post{
   font-size:15px;
+  text-align:center;
 }
 
 #time-stamp-post{
@@ -118,6 +128,14 @@ h1 {
   text-align:justify;
 }
 
+#post-footer li{
+  list-style-type:none;
+  float:right;
+  padding-right:7px;
+  bottom:0;
+  right:0;
+  position:absolute;
+}
 
 
 

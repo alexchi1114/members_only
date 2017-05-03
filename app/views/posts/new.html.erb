@@ -1,0 +1,15 @@
+<div class = "container">
+	<div class = 'form-group'>
+		<%= form_for(@post) do |f| %>
+
+		<%= f.label :subject%>
+      	<%= f.text_field :subject, class: "form-control"%>
+        <br>
+      	<%= f.label "Content (cannot exceed 140 characters)" %>
+      	<%= f.text_area :body, class: "form-control", :maxlength => 140%>
+
+      	<br>
+      	<%= f.submit "Create Post", class: "btn btn-primary form-control" %>
+    <% end %>
+  </div>
+</div>
