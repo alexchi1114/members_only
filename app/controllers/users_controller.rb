@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@posts = Post.where(:user_id => @user.id).paginate(page:params[:page],per_page: 5).order('created_at desc')
+		@posts = Post.where("user_id = ?", params[:id]).paginate(page:params[:page],per_page: 5).order('created_at desc')
 	end
 
 	private 
